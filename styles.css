@@ -1,0 +1,113 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address,big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul,li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption,footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}article, aside, details, figcaption, figure,footer,header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul{list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: "";content: none;}table {border-collapse: collapse;border-spacing: 0;}
+
+body {
+    background: #d3D5E6;
+    height: 100vh;
+}
+
+.container {
+    margin: 5vh 10vw;
+}
+
+.displaybox {
+    height: 500px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 1vh;
+    padding-bottom: 3vh;
+    background: #FFF;
+    border: 1px solid #AAA;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.displaybox ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.displaybox ul li {
+    width: 100%;
+    list-style-type: none;
+    margin-bottom: 1%;
+}
+
+.displaybox ul .user .heading,
+.displaybox ul .bot .heading {
+    font-weight: bold;
+    padding: 1%;
+    padding-bottom: 0.5em;
+}
+
+.displaybox ul .user .heading {
+    text-align: left;
+}
+
+.displaybox ul .bot .heading {
+    text-align: right;
+}
+
+.displaybox ul .user .msg-content {
+    float: left;
+    margin-left: 1%;
+    background: #41f2ab;
+    border-radius: 7px;
+    width: 60%;
+}
+
+.displaybox ul .bot .msg-content {
+    float: right;
+    margin-right: 1%;
+    background: #4286f4;
+    border-radius: 7px;
+    width: 60%;
+}
+
+
+.displaybox ul .user .msg-content p {
+    position:relative;
+    top: 0.5em;
+    left: 1%;
+    right: 50%;
+    margin-left: 1%;
+    width: 70%;
+}
+
+.displaybox ul .bot .msg-content p {
+    position:relative;
+    top: 0.5em;
+    right: 1%;
+    left: 5%;
+    margin-right: 1%;
+    width: 70%;
+    padding-bottom: 10%;
+}
+
+.displaybox ul .bot .msg-content img {
+    float:right;
+    margin-right: 2%;
+    max-width: 15%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.displaybox ul .user .msg-content img {
+    float:left;
+    margin-left: 2%;
+    max-width: 15%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.inputbox {
+    resize: none;
+    padding: 1% 1%;
+    width: 98%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
