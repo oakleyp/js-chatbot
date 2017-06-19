@@ -49,6 +49,10 @@ class ChatBot {
             "@wiki [query]: Replies with a link to the wikipedia page matching a given query."
         ];
         
+        this.apikeys = {
+            "openweathermap":"7ffc48c18a204e3b84a40a280a297488",
+        }
+        
         if(this.logmode == 3) 
             console.log(`ChatBot initialized -- name: ${this.name}; features: ${this.features.join(", ")}; container content: ${this.containerdiv.innerHTML}`);
     }
@@ -146,7 +150,7 @@ class ChatBot {
         
         let response = `The current temperature for zipcode ${zip} is `;
         
-        let results = this.getFetchJSON(`${this.protocol}//api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=7ffc48c18a204e3b84a40a280a297488`);
+        let results = this.getFetchJSON(`${this.protocol}//api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=${this.apikeys["openweathermap"]}`);
         if(results != null) {
             response += `${this.getDegFahrenheit(results["main"]["temp"])}, with a high of ${this.getDegFahrenheit(results["main"]["temp_max"])} and a low of ${this.getDegFahrenheit(results["main"]["temp_min"])}`;
             return response;
