@@ -50,7 +50,7 @@ class ChatBot {
         ];
         
         this.apikeys = {
-            "openweathermap":"7ffc48c18a204e3b84a40a280a297488",
+            "openweathermap":"b2e07ccef71f4c914796c2328583b557",
         }
         
         if(this.logmode == 3) 
