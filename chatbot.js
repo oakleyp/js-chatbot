@@ -146,7 +146,7 @@ class ChatBot {
         
         let response = `The current temperature for zipcode ${zip} is `;
         
-        let results = this.getFetchJSON(`${this.protocol}//api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=b1b15e88fa797225412429c1c50c122a`);
+        let results = this.getFetchJSON(`${this.protocol}//api.openweathermap.org/data/2.5/weather?zip=${zip},us`);
         if(results != null) {
             response += `${this.getDegFahrenheit(results["main"]["temp"])}, with a high of ${this.getDegFahrenheit(results["main"]["temp_max"])} and a low of ${this.getDegFahrenheit(results["main"]["temp_min"])}`;
             return response;
